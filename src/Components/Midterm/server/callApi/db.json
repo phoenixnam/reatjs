@@ -1,19 +1,6 @@
 {
   "products": [
     {
-      "name": "Doughnuts11",
-      "price": "15",
-      "image": "../../../../../../img/banh1.jpg",
-      "color": "Hồng bánh kem",
-      "name_category": "sản phẩm hot",
-      "material": "Bánh và trứng",
-      "expiry_date": "3 ngày",
-      "origin": "Đà Nẵng",
-      "description": "Dành cho những người đói bụng",
-      "tinhtranghang": true,
-      "id": "3"
-    },
-    {
       "name": "Bánh Tiramisu Italia",
       "price": "36",
       "image": "../../../../../../img/banh1.jpg",
@@ -207,16 +194,53 @@
       "id": "a9QL-t6"
     },
     {
-      "name": "",
-      "price": "",
-      "image": "",
-      "color": "",
+      "id": "Qsv5x8c",
+      "name": "Hoa hồng",
+      "price": "50000",
+      "image": "../../../../../../img/banh4.jpg",
+      "color": "blue",
       "name_category": "",
-      "material": "",
-      "expiry_date": "",
-      "origin": "",
-      "description": "",
-      "id": "Qsv5x8c"
+      "material": "12",
+      "expiry_date": "12/10/2023",
+      "origin": "Viet Nam",
+      "description": "BBBB"
+    },
+    {
+      "id": "l_6zCK3",
+      "name": "xfdf",
+      "price": "gfg",
+      "image": "../../../../../../img/image(1941).png",
+      "color": "dgd",
+      "name_category": "",
+      "material": "sdfd",
+      "expiry_date": "đfg",
+      "origin": "dfgds",
+      "description": "dgfdsg"
+    },
+    {
+      "name": "Hoa ",
+      "price": "kem",
+      "image": "áo",
+      "color": "fd",
+      "name_category": "è",
+      "material": "ed",
+      "expiry_date": "2023-06-23",
+      "origin": "fef",
+      "description": "dưed",
+      "showAddForm": false,
+      "id": "hJqPFxc"
+    },
+    {
+      "id": "UuTNX8s",
+      "name": "Hoa ",
+      "price": "kem",
+      "image": "áo",
+      "color": "fd",
+      "name_category": "",
+      "material": "ed",
+      "expiry_date": "2023-06-23",
+      "origin": "fef",
+      "description": "dưed"
     }
   ],
   "categories": [

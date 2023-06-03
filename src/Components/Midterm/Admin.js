@@ -1,6 +1,8 @@
 import React from "react";
 
 import axios from "axios";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import './style/admin.css'
 
 class Admin extends React.Component {
@@ -56,7 +58,8 @@ class Admin extends React.Component {
         material: this.state.material,
         expiry_date: this.state.expiry_date,
         origin: this.state.origin,
-        description: this.state.description
+        description: this.state.description,
+        showAddForm: false 
       };
 
       const response = await axios.post(
@@ -67,19 +70,7 @@ class Admin extends React.Component {
       console.log(response);
 
       const updatedProduct = [...this.state.product, response.data];
-
-      this.setState({
-        product: updatedProduct,
-        name: '',
-        price: '',
-        image: '',
-        color: '',
-        name_category: '',
-        material: '',
-        expiry_date: '',
-        origin: '',
-        description: ''
-      });
+     alert("Sản phẩm đã được thêm thành công!");
     } catch (error) {
       console.log(error);
     }
@@ -101,6 +92,7 @@ class Admin extends React.Component {
       description: product.description,
       showEditForm: true
     });
+  
   }
 
   formAddBook = () => {
@@ -112,39 +104,39 @@ class Admin extends React.Component {
               <div className="card-body">
                 <div className="form-group">
                   <label>Name</label>
-                  <input type="text" className="form-control" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ name: e.target.value })} />
                 </div>
                 <div className="form-group">
                   <label>Price</label>
-                  <input type="text" className="form-control" value={this.state.price} onChange={(e) => this.setState({ price: e.target.value })} />
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ price: e.target.value })} />
                 </div>
                 <div className="form-group">
                   <label>Image</label>
-                  <input type="text" className="form-control" value={this.state.image} onChange={(e) => this.setState({ image: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ image: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Color</label>
-                  <input type="text" className="form-control" value={this.state.color} onChange={(e) => this.setState({ color: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ color: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Name Category</label>
-                  <input type="text" className="form-control" value={this.state.name_category} onChange={(e) => this.setState({ name_category: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="text" className="form-control"  onChange={(e) => this.setState({ name_category: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Material</label>
-                  <input type="text" className="form-control" value={this.state.material} onChange={(e) => this.setState({ material: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ material: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Expiry_date</label>
-                  <input type="text" className="form-control" value={this.state.expiry_date} onChange={(e) => this.setState({ expiry_date: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="date" className="form-control" onChange={(e) => this.setState({ expiry_date: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Origin</label>
-                  <input type="text" className="form-control" value={this.state.origin} onChange={(e) => this.setState({ origin: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ origin: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Description</label>
-                  <input type="text" className="form-control" value={this.state.description} onChange={(e) => this.setState({ description: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="text" className="form-control" onChange={(e) => this.setState({ description: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <button type="button" className="btn btn-primary" onClick={this.addBook}>Add</button>
               </div>
@@ -167,7 +159,7 @@ class Admin extends React.Component {
               <div className="card-body">
                 <div className="form-group">
                   <label>ID</label>
-                  <input type="text" className="form-control" value={this.state.id} onChange={(e) => this.setState({ id: e.target.value })} />
+                  <input type="text" className="form-control" readOnly="true" value={this.state.id} onChange={(e) => this.setState({ id: e.target.value })} />
                 </div>
                 <div className="form-group">
                   <label>Name</label>
@@ -191,7 +183,7 @@ class Admin extends React.Component {
                 </div>
                 <div className="form-group">
                   <label>Expiry_date</label>
-                  <input type="text" className="form-control" value={this.state.expiry_date} onChange={(e) => this.setState({ expiry_date: e.target.value })} /> {/* Sửa thành 'quantity' */}
+                  <input type="date" className="form-control" value={this.state.expiry_date} onChange={(e) => this.setState({ expiry_date: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <div className="form-group">
                   <label>Origin</label>
@@ -202,7 +194,7 @@ class Admin extends React.Component {
                   <input type="text" className="form-control" value={this.state.description} onChange={(e) => this.setState({ description: e.target.value })} /> {/* Sửa thành 'quantity' */}
                 </div>
                 <button type="button" className="btn btn-primary" onClick={this.updateBook}>Sửa</button>
-                <button type="button" className="btn btn-primary" onClick={() => this.setState({ showEditForm: false })}>Hủy</button>
+                <button type="button" className="btn btn-primary" onClick={() => this.setState({ showEditForm: true })}>Hủy</button>
               </div>
             </div>
           </div>
