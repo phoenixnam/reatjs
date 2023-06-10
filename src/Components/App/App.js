@@ -69,10 +69,11 @@
 // export default App;
 
 import React from "react";
-import AllProject from "../Do_an/AllProject";
+import LoginForm from "../Midterm/10_06/LoginForm";
+
 function App(){
    <>  
-      <AllProject></AllProject>
+     <LoginForm></LoginForm>
    </>
 }
 export default App;

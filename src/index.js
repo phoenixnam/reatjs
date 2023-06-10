@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Components/App/App';
+
 import reportWebVitals from './reportWebVitals';
-import AllProject from './Components/Do_an/AllProject';
-import Lazada from './Components/Midterm/Lazada';
+
+import Login from './Components/Midterm/10_06/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App />
-    <AllProject></AllProject> */}
-<Lazada></Lazada>
+
+<Login></Login>
   </React.StrictMode>
 );
 
