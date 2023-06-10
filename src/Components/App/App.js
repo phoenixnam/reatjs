@@ -43,28 +43,37 @@
 
 // export default App;
 
-import './App.css';
-import Header from '../Midterm/Header';
-import Footer from '../footer/Footer';
-import Admin from '../Midterm/Admin';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Show from '../Midterm/ShowProduct';
-import Cart from '../Midterm/Cart';
-function App() {
-  return (
+// import './App.css';
+// import Header from '../Midterm/Header';
+// import Footer from '../footer/Footer';
+// import Admin from '../Midterm/Admin';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Show from '../Midterm/ShowProduct';
+// import Cart from '../Midterm/Cart';
+// function App() {
+//   return (
     
-      <Router>
-         <Header/>
-         <Routes>
-         <Route path='/' element={<Show/>}/>
-            <Route path='/Cart' element={<Cart/>}/>
-            <Route path='/Admin' element={<Admin/>}/>;
-         </Routes>
+//       <Router>
+//          <Header/>
+//          <Routes>
+//          <Route path='/' element={<Show/>}/>
+//             <Route path='/Cart' element={<Cart/>}/>
+//             <Route path='/Admin' element={<Admin/>}/>;
+//          </Routes>
          
-         </Router>
+//          </Router>
     
      
-  );
+//   );
+// }
+// export default App;
+
+import React from "react";
+import LoginForm from "../Midterm/10_06/LoginForm";
+
+function App(){
+   <>  
+     <LoginForm></LoginForm>
+   </>
 }
 export default App;
-
