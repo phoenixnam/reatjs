@@ -20,28 +20,7 @@
 // }
 
 
-// import React, {Component} from 'react';
-// import Add from '../Add';
-// import './App.css';
 
-// import ProductList from '../Midterm/ProductList';
-// // import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-// class App extends Component {
-//   render(){
-//   return (
-//   <>
-
-// <ProductList></ProductList>
-
-
-//     </>
-//   )
-//   }
-
-// }
-
-// export default App;
 
 // import './App.css';
 // import Header from '../Midterm/Header';
@@ -69,11 +48,19 @@
 // export default App;
 
 import React from "react";
-import LoginForm from "../Midterm/10_06/LoginForm";
+import User from "../Do_an/Admin/User";
+import Project from "../Do_an/Admin/Project";
+import MyForm from "../Do_an/Form";
+
 
 function App(){
-   <>  
-     <LoginForm></LoginForm>
-   </>
+  return(
+    <>
+<User/>
+{/* <Project></Project> */}
+<Project></Project>
+<MyForm></MyForm>
+    </>
+  )
 }
 export default App;

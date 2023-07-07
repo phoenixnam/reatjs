@@ -1,0 +1,100 @@
+/* Add your custom CSS styles here */
+
+/* Example styles for the user component */
+.container {
+    margin-top: 20px;
+  }
+  
+  #nav {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+  }
+  
+  .nav-link {
+    color: #343a40;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: #17a2b8;
+  }
+  
+  .upgrade-button {
+    margin-top: 20px;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-sm {
+    margin-left: 5px;
+  }
+  
+  .active {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .active:hover {
+    background-color: #138496;
+    color: white;
+  }
+  .MuiPaper-root{
+    background-color: #343a40;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -117px;
+    height: 600px;
+  }
+  .MuiBox-root.css-7txj2x {
+    margin-top: 20px;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    text-align: center;
+    
+  }
+  .MuiBox-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .material-icons-round{
+    border: none;
+  }
+  .MuiListItemIcon-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    margin-right: 34px; /* Khoảng cách giữa biểu tượng và văn bản */
+  }
+  

@@ -16,8 +16,8 @@ class Register extends React.Component {
     e.preventDefault();
 
     try {
-      // Call the registration API with user information
-      const response = await fetch('http://localhost:3000/user', {
+     
+      const response = await fetch('User: https://fakestoreapi.com/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -30,10 +30,7 @@ class Register extends React.Component {
       });
 
       if (response.ok) {
-        // Registration successful
-        this.setState({ isLoggedIn: true, error: '' });
-        // Redirect to another page or perform actions after successful registration
-        // For example: history.push('/dashboard');
+        this.setState({ isLoggedIn: true, error: '' });     
       } else {
         // Handle registration error
         const errorData = await response.json();
@@ -61,7 +58,7 @@ class Register extends React.Component {
     const { isLoggedIn, error } = this.state;
 
     return (
-      <div>
+      <React.Fragment>
         {isLoggedIn ? (
           <div>
             <h1>Welcome, you are logged in!</h1>
@@ -75,7 +72,7 @@ class Register extends React.Component {
               <label>
                 Username:
                 <input
-                required
+                  required
                   type="text"
                   placeholder="Username"
                   value={this.state.username}
@@ -86,7 +83,7 @@ class Register extends React.Component {
               <label>
                 Password:
                 <input
-                required
+                  required
                   type="password"
                   placeholder="Password"
                   value={this.state.password}
@@ -97,7 +94,7 @@ class Register extends React.Component {
               <label>
                 Email:
                 <input
-                required
+                  required
                   type="email"
                   placeholder="Email"
                   value={this.state.email}
@@ -109,7 +106,7 @@ class Register extends React.Component {
             </form>
           </div>
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
